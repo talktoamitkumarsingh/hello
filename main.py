@@ -213,7 +213,7 @@ def oi_calculation(value) -> list:
     return final_list
 
 
-enctoken = "UXzHU+hWCnCKprwMiuuaLfiscy4CowZL4numDqnNrVNrYBEQn8OTdVqec7f6JK34AdV/sTH+j6d9FFURvWvzgCv0ch3zGzCrtrOcyylkLmHOKntyBBYONA=="
+enctoken = "oBcYJpaeAHEdKDnwA++ciRgM643qGuwHLu2oBBqHGobwsUGQaBGz9MXi3A6aq6rFsMmZrumVOGkokE9E/FPzJwu0x3hDbsljAlxIEuqlCQx6lh3PWaqxNg=="
 
 
 kite = KiteApp(enctoken=enctoken)
@@ -223,14 +223,14 @@ all_oi_ce = 0
 all_oi_pe = 0
 delta_adj = 0.00
 
-prev_day_ce_oi = 17637
-prev_day_pe_oi = 17529
+prev_day_ce_oi = 20693
+prev_day_pe_oi = 18325
 
 while time.time() < t_end:
     s0 = str((kite.ltp('NSE:NIFTY 50')))
     current_value = nse_current(s0)
     print(current_value)
-    current_value = "21750"
+    current_value = "21650"
     delta_adj = float(delta_adjustment(current_value))
 
     master_list = range_calculation(current_value)

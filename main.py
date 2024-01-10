@@ -125,7 +125,7 @@ def range_calculation(temp) -> list:
     master_string_pe = ""
     master_string_ce = ""
     master_list = ["CE", "PE"]
-    pre_string = "NFO:NIFTY24104"
+    pre_string = "NFO:NIFTY24111"
 
     flag_thou = int((float(temp)) / 1000)
     flag_hund = int((float(temp)) % 1000)
@@ -213,7 +213,7 @@ def oi_calculation(value) -> list:
     return final_list
 
 
-enctoken = "oBcYJpaeAHEdKDnwA++ciRgM643qGuwHLu2oBBqHGobwsUGQaBGz9MXi3A6aq6rFsMmZrumVOGkokE9E/FPzJwu0x3hDbsljAlxIEuqlCQx6lh3PWaqxNg=="
+enctoken = "SraJ89MmJtptncBL87akORg4u5YLmkY2D7XWycJeyYBaRPplcsPdD/iXV9Jw7Xlw8JGYFfKxTMgRFj6VhbHZYfJnffbS/d8MbnNesdi5yIttvcIkv8K4Mw=="
 
 
 kite = KiteApp(enctoken=enctoken)
@@ -223,14 +223,14 @@ all_oi_ce = 0
 all_oi_pe = 0
 delta_adj = 0.00
 
-prev_day_ce_oi = 20693
-prev_day_pe_oi = 18325
+prev_day_ce_oi = 18603
+prev_day_pe_oi = 16433
 
 while time.time() < t_end:
     s0 = str((kite.ltp('NSE:NIFTY 50')))
     current_value = nse_current(s0)
     print(current_value)
-    current_value = "21650"
+    current_value = "21550"
     delta_adj = float(delta_adjustment(current_value))
 
     master_list = range_calculation(current_value)
